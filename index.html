@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum DOM, Event, dan Eksperimen Mandiri</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- Judul Utama Halaman -->
+    <h1 id="judul">Belajar JavaScript DOM</h1>
+
+    <hr style="margin: 20px 0;">
+
+    <!-- Latihan 1 & 2: Ubah Teks & Event Click -->
+    <section>
+        <h2>Latihan 1 & 2: Ubah Teks & Event Click</h2>
+        <p id="pesan">Belum ada tindakan.</p>
+        <button id="tombolAksi" type="button">Klik Saya</button>
+    </section>
+
+    <hr style="margin: 20px 0;">
+
+    <!-- Latihan 3: Mengubah Kelas dan Gaya CSS -->
+    <section>
+        <h2>Latihan 3: Mengubah Kelas dan Gaya CSS</h2>
+        <p id="teksGaya">Teks ini akan berubah gaya saat tombol diklik.</p>
+        <button id="tombolGaya" type="button">Ubah Gaya</button>
+    </section>
+
+    <hr style="margin: 20px 0;">
+
+    <!-- Latihan 4: Event Input & Penghitung Karakter -->
+    <section>
+        <h2>Latihan 4: Event Input & Penghitung Karakter</h2>
+        <label for="namaInput">Nama:</label><br>
+        <input type="text" id="namaInput" maxlength="40">
+        <p>Jumlah karakter: <span id="jumlahKarakter">0</span></p>
+    </section>
+
+    <hr style="margin: 20px 0;">
+
+    <!-- Latihan 5: Validasi Form Pendaftaran -->
+    <section>
+        <h2>Latihan 5: Validasi Form Pendaftaran</h2>
+        <form id="formPendaftaran" novalidate>
+            <div style="margin-bottom: 10px;">
+                <label for="nama">Nama lengkap (Minimal 3 karakter)</label><br>
+                <input id="nama" name="nama" type="text">
+            </div>
+            <div style="margin-bottom: 10px;">
+                <label for="email">Email</label><br>
+                <input id="email" name="email" type="email">
+            </div>
+            <div style="margin-bottom: 10px;">
+                <label for="usia">Usia</label><br>
+                <input id="usia" name="usia" type="number" min="17" max="100">
+            </div>
+            <button type="submit">Daftar</button>
+        </form>
+        <p id="pesanForm" aria-live="polite" style="margin-top: 10px; font-weight: bold;"></p>
+    </section>
+
+    <hr style="margin: 20px 0;">
+
+    <!-- Latihan 6 & Eksperimen: Daftar Tugas (To-Do List dengan Tombol Hapus) -->
+    <section>
+        <h2>Latihan 6 & Eksperimen: Daftar Tugas</h2>
+        <label for="inputTugas">Tugas baru</label><br>
+        <input id="inputTugas" type="text">
+        <button id="tambahTugas" type="button">Tambah</button>
+        <p id="pesanTugas" aria-live="polite" style="margin-top: 5px;"></p>
+        <ul id="daftarTugas" style="margin-top: 10px;"></ul>
+    </section>
+
+    <hr style="margin: 20px 0;">
+
+    <!-- Mini Project: Form Pendaftaran Workshop -->
+    <section>
+        <h2>Mini Project: Form Pendaftaran Workshop</h2>
+        <form id="formWorkshop" novalidate>
+            <div style="margin-bottom: 10px;">
+                <label for="namaWorkshop">Nama Lengkap:</label><br>
+                <input id="namaWorkshop" type="text" maxlength="50">
+                <p style="font-size: 0.85rem; color: #555;">Karakter tersisa: <span id="sisaKarakter">50</span></p>
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <label for="emailWorkshop">Email:</label><br>
+                <input id="emailWorkshop" type="email">
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <label for="pilihanSesi">Pilihan Sesi Workshop:</label><br>
+                <select id="pilihanSesi">
+                    <option value="">-- Pilih Sesi --</option>
+                    <option value="Sesi 1: Dasar JavaScript & DOM">Sesi 1: Dasar JavaScript & DOM</option>
+                    <option value="Sesi 2: Event Handling Lanjutan">Sesi 2: Event Handling Lanjutan</option>
+                    <option value="Sesi 3: Validasi & Aplikasi Interaktif">Sesi 3: Validasi & Aplikasi Interaktif</option>
+                </select>
+                <p id="infoSesi" style="font-size: 0.9rem; color: #3478c8; margin-top: 5px; font-weight: bold;"></p>
+            </div>
+
+            <button type="submit">Daftar Workshop</button>
+            <button type="reset" style="margin-left: 10px;">Reset</button>
+        </form>
+
+        <p id="pesanWorkshop" aria-live="polite" style="margin-top: 10px; font-weight: bold;"></p>
+        
+        <div id="ringkasanWorkshop" style="margin-top: 15px; background: #f4f6f8; padding: 10px; border-radius: 5px; display: none;">
+            <h4>Ringkasan Pendaftaran:</h4>
+            <p id="hasilRingkasan"></p>
+        </div>
+    </section>
+
+    <hr style="margin: 20px 0;">
+
+    <!-- Eksperimen Mandiri No. 4: Toggle Sembunyikan & Tampilkan Paragraf -->
+    <section>
+        <h2>Eksperimen Mandiri 4: Sembunyikan & Tampilkan Paragraf</h2>
+        <p id="paragrafToggle">Ini adalah teks paragraf eksperimen mandiri yang bisa disembunyikan dan dimunculkan kembali menggunakan tombol.</p>
+        <button id="tombolToggle" type="button">Sembunyikan Paragraf</button>
+    </section>
+
+</body>
+</html>
